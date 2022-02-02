@@ -28,17 +28,21 @@ function App() {
     setItemsPerPage(itemsPerPage + 10);
   };
 
+  // data provide to context value
+  const ctxData = {
+    userList,
+    itemsPerPage,
+    loadMore,
+    filterColor,
+    filterCities,
+  };
+
   return (
-    <UserListContext.Provider value={{ userList: userList.slice(0, itemsPerPage), filterColor, filterCities }}>
+    <UserListContext.Provider value={ctxData}>
       <div className="App m-4">
-        <div className="flex flex-col gap-y-6">
+        <div className="flex flex-col gap-y-10">
           <Header />
           <List />
-          {itemsPerPage < userList.length && (
-            <button onClick={loadMore} className="font-bold border-default border-blue-400 shadow-md p-3 rounded w-fit self-center">
-              Load More
-            </button>
-          )}
         </div>
       </div>
     </UserListContext.Provider>
