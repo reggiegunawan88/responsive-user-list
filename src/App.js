@@ -16,11 +16,15 @@ function App() {
   }, []);
 
   const filterColor = () => {
-    console.log("filter color");
+    const sortedList = [...userList];
+    sortedList.sort((a, b) => (a.dob.age > b.dob.age ? 1 : -1));
+    setUserList(sortedList);
   };
 
   const filterCities = () => {
-    console.log("filter city");
+    const sortedList = [...userList];
+    sortedList.sort((a, b) => (a.location.city > b.location.city ? 1 : -1));
+    setUserList(sortedList);
   };
 
   // load more add 10 items per pagination

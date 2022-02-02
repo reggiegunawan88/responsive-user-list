@@ -16,7 +16,7 @@ function Header() {
     <div className="flex flex-row justify-between">
       <div className="flex flex-row items-center gap-x-3">
         <img alt="logo" src="/qoala-logo.png" className="w-9 h-9 rounded" />
-        <h3 className="uppercase font-serif">Qoala Apps</h3>
+        <h3 className="font-serif font-bold">Qoala Apps</h3>
       </div>
       <div className="flex flex-col laptopM:flex-row gap-4 items-center">
         <p>Filter by:</p>
