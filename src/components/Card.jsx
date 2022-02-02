@@ -17,7 +17,7 @@ function Card(props) {
   };
 
   return (
-    <div style={{ width: "350px", backgroundColor: bgColor() }} className="border-default border-black p-3 rounded-md shadow-lg">
+    <div style={{ width: "350px", backgroundColor: bgColor() }} className="border-default border-black p-3 rounded-md shadow-lg h-fit">
       <div className="flex flex-col gap-y-4 text-center">
         <div className="flex flex-row laptopM:flex-col gap-x-4 gap-y-4 items-center justify-evenly">
           <img alt="user-pict" src={userData.picture.thumbnail} className=" w-20 h-20" />
