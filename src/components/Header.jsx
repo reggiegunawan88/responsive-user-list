@@ -8,8 +8,8 @@ function Header() {
    *
    * @param {String} param => filter value based on clicked button
    */
-  const filterValue = (param) => {
-    userCtx.filterList(param);
+  const sortValue = (param) => {
+    userCtx.sortList(param);
   };
 
   return (
@@ -19,12 +19,12 @@ function Header() {
         <h3 className="font-serif font-bold">Qoala Apps</h3>
       </div>
       <div className="flex flex-col laptopM:flex-row gap-4 items-center">
-        <p>Filter by:</p>
+        <p>Sort by:</p>
         <div className="flex flex-row gap-x-3">
-          <button onClick={() => filterValue("color")} className="btn-filter bg-indigo-400 hover:bg-indigo-600">
+          <button onClick={() => sortValue("color")} className="btn-filter bg-indigo-400 hover:bg-indigo-600">
             Color
           </button>
-          <button onClick={() => filterValue("cities")} className="btn-filter bg-indigo-400 hover:bg-indigo-600">
+          <button onClick={() => sortValue("cities")} className="btn-filter bg-indigo-400 hover:bg-indigo-600">
             Cities
           </button>
         </div>

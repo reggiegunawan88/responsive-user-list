@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   // filter user list based on clicked value
-  const filterList = (value) => {
+  const sortList = (value) => {
     const sortedList = [...userList];
 
     if (value === "color") {
@@ -37,7 +37,7 @@ function App() {
     userList,
     itemsPerPage,
     loadMore,
-    filterList,
+    sortList,
   };
 
   return (
