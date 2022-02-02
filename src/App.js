@@ -15,15 +15,15 @@ function App() {
     });
   }, []);
 
-  const filterColor = () => {
+  // filter user list based on clicked value
+  const filterList = (value) => {
     const sortedList = [...userList];
-    sortedList.sort((a, b) => (a.dob.age > b.dob.age ? 1 : -1));
-    setUserList(sortedList);
-  };
 
-  const filterCities = () => {
-    const sortedList = [...userList];
-    sortedList.sort((a, b) => (a.location.city > b.location.city ? 1 : -1));
+    if (value === "color") {
+      sortedList.sort((a, b) => (a.dob.age > b.dob.age ? 1 : -1));
+    } else {
+      sortedList.sort((a, b) => (a.location.city > b.location.city ? 1 : -1));
+    }
     setUserList(sortedList);
   };
 
@@ -37,8 +37,7 @@ function App() {
     userList,
     itemsPerPage,
     loadMore,
-    filterColor,
-    filterCities,
+    filterList,
   };
 
   return (

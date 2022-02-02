@@ -4,12 +4,12 @@ import { UserListContext } from "App";
 function Header() {
   const userCtx = useContext(UserListContext);
 
-  const filterColor = () => {
-    userCtx.filterColor();
-  };
-
-  const filterCities = () => {
-    userCtx.filterCities();
+  /**
+   *
+   * @param {String} param => filter value based on clicked button
+   */
+  const filterValue = (param) => {
+    userCtx.filterList(param);
   };
 
   return (
@@ -21,10 +21,10 @@ function Header() {
       <div className="flex flex-col laptopM:flex-row gap-4 items-center">
         <p>Filter by:</p>
         <div className="flex flex-row gap-x-3">
-          <button onClick={filterColor} className="btn-filter">
+          <button onClick={() => filterValue("color")} className="btn-filter bg-indigo-400 hover:bg-indigo-600">
             Color
           </button>
-          <button onClick={filterCities} className="btn-filter">
+          <button onClick={() => filterValue("cities")} className="btn-filter bg-indigo-400 hover:bg-indigo-600">
             Cities
           </button>
         </div>
