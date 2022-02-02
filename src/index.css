@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* reusable css for btn filter */
+.btn-filter {
+  @apply border-default border-gray-400 p-3 rounded outline-none;
+}
