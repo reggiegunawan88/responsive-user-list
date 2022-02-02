@@ -11,6 +11,7 @@ Description: A simple single page application (SPA) to show user list and filter
 ## Information
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CSS framework by TailwindCSS (https://tailwindcss.com/docs/guides/create-react-app)
 
 ## Screenshot
 
